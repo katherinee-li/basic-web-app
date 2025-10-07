@@ -14,12 +14,12 @@ export default function QueryProcessor(query: string): string {
     return "kli5";
   }
 
-  if (query.toLowerCase().includes("Which of the following numbers is the largest: 13, 36, 75?")) {
-    return "75";
-  }
-
-  if (query.toLowerCase().includes("What is 10 plus 32?")) {
-    return "42";
+  if (query.toLowerCase().includes("Which of the following numbers is the largest: x, y, z?")) {
+    const int_x = parseInt(x, 10);
+    const int_y = parseInt(y, 10);
+    const int_z = parseInt(z, 10);
+    const largest = Math.max(int_x, int_y, int_z);
+    return String(largest);
   }
 
 
